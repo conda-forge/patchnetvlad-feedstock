@@ -1,5 +1,5 @@
 {% set name = "patchnetvlad" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/patchnetvlad-{{ version }}.tar.gz
-  sha256: b0a6dc49bdf613893e82b50864c5cbaab5b6836ed0bb4534a1a531bfd62c7b73
+  sha256: a114e794acb3f83e7316a6346581e8823025c5f496998a4bbf7592463f2886f5
 
 build:
   number: 0
