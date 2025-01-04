@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/patchnetvlad-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/patchnetvlad-{{ version }}.tar.gz
   sha256: d55614c89ecaa28fba5a52c866517a49c6c1aa4479af1856c5a43eb0c4ae3d47
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - patchnetvlad-match-two=match_two:main
@@ -23,9 +23,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - tqdm
@@ -50,6 +50,7 @@ test:
     - patchnetvlad-feature-extract --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/QVPR/Patch-NetVLAD
